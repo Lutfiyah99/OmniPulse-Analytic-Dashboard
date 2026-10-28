@@ -1,0 +1,176 @@
+{
+  "config": {
+    "companyName": "NusaMart Electronics",
+    "dashboardTitle": "OmniPulse Inventory Command Center",
+    "initialBudget": 25000000,
+    "remainingBudget": 25000000,
+    "currentSimulationDay": 1,
+    "targetRestockDays": 4
+  },
+  "categories": [
+    "Audio",
+    "Wearables",
+    "Accessories",
+    "Peripherals"
+  ],
+  "products": [
+    {
+      "id": "PRD-001",
+      "sku": "AUD-TWS-01",
+      "name": "SonicWave ANC True Wireless Earbuds",
+      "category": "Audio",
+      "buyPrice": 320000,
+      "sellPrice": 499000,
+      "stock": 6,
+      "avgDailySales": 3
+    },
+    {
+      "id": "PRD-002",
+      "sku": "AUD-HD-02",
+      "name": "BassPro Studio Over-Ear Headphone",
+      "category": "Audio",
+      "buyPrice": 550000,
+      "sellPrice": 850000,
+      "stock": 20,
+      "avgDailySales": 4
+    },
+    {
+      "id": "PRD-003",
+      "sku": "AUD-SPK-03",
+      "name": "MiniBoom Waterproof Bluetooth Speaker",
+      "category": "Audio",
+      "buyPrice": 210000,
+      "sellPrice": 340000,
+      "stock": 45,
+      "avgDailySales": 3
+    },
+    {
+      "id": "PRD-004",
+      "sku": "AUD-MIC-04",
+      "name": "ClearCast USB Condenser Microphone",
+      "category": "Audio",
+      "buyPrice": 420000,
+      "sellPrice": 650000,
+      "stock": 35,
+      "avgDailySales": 0
+    },
+    {
+      "id": "PRD-005",
+      "sku": "WRB-SW-01",
+      "name": "FitPulse AMOLED Smartwatch Gen 2",
+      "category": "Wearables",
+      "buyPrice": 480000,
+      "sellPrice": 749000,
+      "stock": 4,
+      "avgDailySales": 2
+    },
+    {
+      "id": "PRD-006",
+      "sku": "WRB-SB-02",
+      "name": "ActiveTrack Lite Fitness Band",
+      "category": "Wearables",
+      "buyPrice": 180000,
+      "sellPrice": 299000,
+      "stock": 14,
+      "avgDailySales": 2
+    },
+    {
+      "id": "PRD-007",
+      "sku": "WRB-STR-03",
+      "name": "Magnetic Milanese Watch Strap 22mm",
+      "category": "Wearables",
+      "buyPrice": 45000,
+      "sellPrice": 95000,
+      "stock": 90,
+      "avgDailySales": 1
+    },
+    {
+      "id": "PRD-008",
+      "sku": "ACC-GAN-01",
+      "name": "VoltMax 65W GaN Fast Charger",
+      "category": "Accessories",
+      "buyPrice": 165000,
+      "sellPrice": 275000,
+      "stock": 9,
+      "avgDailySales": 3
+    },
+    {
+      "id": "PRD-009",
+      "sku": "ACC-PB-02",
+      "name": "PowerCore 20000mAh PD Powerbank",
+      "category": "Accessories",
+      "buyPrice": 240000,
+      "sellPrice": 389000,
+      "stock": 0,
+      "avgDailySales": 4
+    },
+    {
+      "id": "PRD-010",
+      "sku": "ACC-CBL-03",
+      "name": "Braided Type-C to Type-C 100W Cable",
+      "category": "Accessories",
+      "buyPrice": 35000,
+      "sellPrice": 79000,
+      "stock": 60,
+      "avgDailySales": 5
+    },
+    {
+      "id": "PRD-011",
+      "sku": "ACC-HUB-04",
+      "name": "MultiPort 8-in-1 Aluminum USB-C Hub",
+      "category": "Accessories",
+      "buyPrice": 290000,
+      "sellPrice": 460000,
+      "stock": 15,
+      "avgDailySales": 3
+    },
+    {
+      "id": "PRD-012",
+      "sku": "PRP-KB-01",
+      "name": "KeyMech 75% Wireless Mechanical Keyboard",
+      "category": "Peripherals",
+      "buyPrice": 620000,
+      "sellPrice": 950000,
+      "stock": 6,
+      "avgDailySales": 2
+    },
+    {
+      "id": "PRD-013",
+      "sku": "PRP-MS-02",
+      "name": "ErgoGlide Vertical Wireless Mouse",
+      "category": "Peripherals",
+      "buyPrice": 195000,
+      "sellPrice": 325000,
+      "stock": 36,
+      "avgDailySales": 3
+    },
+    {
+      "id": "PRD-014",
+      "sku": "PRP-WC-03",
+      "name": "StreamVision 1080p 60FPS Webcam",
+      "category": "Peripherals",
+      "buyPrice": 380000,
+      "sellPrice": 590000,
+      "stock": 80,
+      "avgDailySales": 1
+    },
+    {
+      "id": "PRD-015",
+      "sku": "PRP-MP-04",
+      "name": "DeskMat XL Waterproof Gaming Mousepad",
+      "category": "Peripherals",
+      "buyPrice": 65000,
+      "sellPrice": 135000,
+      "stock": 40,
+      "avgDailySales": 2
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "LOG-001",
+      "timestamp": "Hari ke-1",
+      "type": "SYSTEM_INIT",
+      "message": "Sistem OmniPulse diinisialisasi dengan 15 SKU aktif dan budget Rp 25.000.000."
+    }
+  ]
+}

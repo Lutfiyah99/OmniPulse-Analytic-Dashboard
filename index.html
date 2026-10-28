@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Nova+Mono&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>OmniPulse Analytic Dashboard</title>
+</head>
+
+<body class="font-[poppins] bg-bg-main dark:bg-bg-dark">
+
+    <!-- HEADER -->
+    <header
+        class="w-full py-4 lg:h-20 flex flex-col lg:flex-row lg:items-center lg:justify-between sticky top-0 z-50 px-4 md:px-8 bg-white dark:bg-bg-dark border-b border-slate-200 dark:border-white/10 dark:shadow-none shadow-lg dark:shadow-2xl gap-4">
+
+        <!-- ICON DAN TITLE -->
+        <div
+            class="flex cursor-pointer items-center justify-center lg:justify-start gap-2 md:gap-3 lg:gap-5 w-full lg:w-auto">
+            <div
+                class="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-500 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
+                <svg class="w-15 h-15 text-white" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 3L27 9.5V22.5L16 29L5 22.5V9.5L16 3Z" stroke="currentColor" stroke-width="1.75"
+                        stroke-opacity="0.4" stroke-linejoin="round" />
+                    <path d="M5 9.5L16 16L27 9.5M16 16V29" stroke="currentColor" stroke-width="1.25"
+                        stroke-opacity="0.25" stroke-linejoin="round" />
+                    <path d="M4 16H9.5L12.5 9L16 23L19.5 13L21.5 16H28" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <!-- Title -->
+            <h1 class="text-lg dark:text-text-primer md:text-xl lg:text-3xl font-semibold">OmniPulse <span
+                    class="hidden xl:inline">- NusaMart Electronics</span></h1>
+        </div>
+
+        <!-- ACTIONS RIGHT -->
+        <div
+            class="flex items-center justify-center dark:text-text-primer gap-3 md:gap-5 lg:gap-8 text-base md:text-xl w-full lg:w-auto">
+            <h2 id="hariKe" class="font-medium">Hari Ke-1</h2>
+            <div class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-zap preview-icon">
+                    <path
+                        d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                </svg>
+                <button id="hariBerlalu" class="cursor-pointer">+1 Hari</button>
+            </div>
+            <div class="flex items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-rotate-ccw preview-icon">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                    <path d="M3 3v5h5" />
+                </svg>
+                <button id="reset" class="cursor-pointer">Reset</button>
+            </div>
+            <button id="theme-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                    class="block dark:hidden cursor-pointer lucide lucide-moon preview-icon">
+                    <path
+                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="hidden dark:block cursor-pointer lucide lucide-sun preview-icon">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 4 CARD KPI -->
+        <section
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 px-4 md:px-5 lg:px-10 pt-6 lg:pt-10">
+            <article
+                class="bg-white dark:bg-bg-card dark:shadow-[0_8px_32px_rgba(139,92,246,0.12)] border-slate-200 shadow-md p-2.5 md:p-5 rounded-xl md:rounded-2xl">
+                <h2 class="text-base lg:text-xl mb-1.5 font-semibold text-to-end">Total Modal Uang</h2>
+                <h3 class="text-2xl font-extrabold dark:text-text-primer" id="modal"></h3>
+            </article>
+            <article
+                class="bg-white dark:bg-bg-card dark:shadow-[0_8px_32px_rgba(139,92,246,0.12)] border-slate-200 shadow-md p-2.5 md:p-5 rounded-xl md:rounded-2xl">
+                <h2 class="text-base lg:text-xl mb-1.5 font-semibold text-to-end">Status Kritis</h2>
+                <h3 class="text-2xl font-extrabold dark:text-text-primer" id="status"></h3>
+            </article>
+            <article
+                class="bg-white dark:bg-bg-card dark:shadow-[0_8px_32px_rgba(139,92,246,0.12)] border-slate-200 shadow-md p-2.5 md:p-5 rounded-xl md:rounded-2xl">
+                <h2 class="text-base lg:text-xl mb-1.5 font-semibold text-to-end">Potensi Omzet</h2>
+                <h3 class="text-2xl font-extrabold dark:text-text-primer" id="omzet"></h3>
+            </article>
+            <article
+                class="bg-white dark:bg-bg-card dark:shadow-[0_8px_32px_rgba(139,92,246,0.12)] border-slate-200 shadow-md p-2.5 md:p-5 rounded-xl md:rounded-2xl">
+                <h2 class="text-base lg:text-xl mb-1.5 font-semibold text-to-end">Sisa Budget</h2>
+                <h3 class="text-2xl font-extrabold dark:text-text-primer" id="budget"></h3>
+            </article>
+        </section>
+
+        <!-- DISTRIBUSI MODAL & LOG RIWAYAT AKTIVITAS -->
+        <section class="flex flex-col lg:flex-row gap-4 lg:gap-6 px-4 md:px-5 lg:px-10 mt-6 lg:mt-10">
+            <div
+                class="w-full lg:w-[60%] bg-white dark:bg-bg-card dark:border-white/5 dark:shadow-black/60 border border-slate-200 shadow-md p-4 md:p-8 rounded-xl md:rounded-2xl">
+                <h2 class="text-base lg:text-2xl font-semibold text-to-end">Distribusi Modal Kategori</h2>
+                <div>
+                    <ul id="distribusiModal"></ul>
+                </div>
+            </div>
+            <div
+                class="w-full lg:w-[40%] max-h-[400px] flex flex-col bg-white dark:bg-bg-card dark:border-white/5 dark:shadow-black/60 border border-slate-200 shadow-md p-4 md:p-8 rounded-xl md:rounded-2xl">
+                <h2 class="text-base lg:text-2xl pb-2 font-semibold text-to-end">Log Riwayat Aktivitas</h2>
+                <div class="flex-1 overflow-x-hidden overflow-y-auto custom-scrollbar ">
+                    <ul id="logRiwayat" class="text-atas-lg mt-2 list-inside list-disc dark:text-text-primer"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTER & TABEL PRODUK GUDANG -->
+        <section class="flex flex-col lg:flex-row items-start gap-4 lg:gap-6 px-4 md:px-5 lg:px-10 mt-6 lg:mt-10">
+
+            <!-- CONTAINER -->
+            <section
+                class="w-full lg:flex-1 lg:min-w-[60%] p-2 md:p-4 bg-white dark:bg-bg-card dark:border-white/5 dark:shadow-black/60 border border-slate-200 shadow-md rounded-2xl">
+
+                <!-- FILTER TABEL -->
+                <div class="flex flex-col xl:flex-row justify-between gap-4 my-5 items-start xl:items-center">
+
+                    <!-- SEARCH INPUT -->
+                    <div
+                        class="flex flex-1 justify-between gap-1.5 py-2.5 px-2 bg-gray-50 dark:bg-[#1A202C] shadow-md rounded-xl w-full xl:w-auto">
+                        <input id="input" type="text" placeholder="Cari nama atau SKU"
+                            class="w-full pl-3 py-1.5 px-2 bg-slate-100 dark:bg-white/5 border border-transparent dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transition-all">
+                        <button id="btnInput">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-search preview-icon text-gray-600 cursor-pointer">
+                                <path d="m21 21-4.34-4.34" />
+                                <circle cx="11" cy="11" r="8" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- MENU SELECT -->
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <div>
+                            <label for="kategori" class="dark:text-text-primer">Kategori:</label>
+                            <select name="kategori" id="filter-kategori"
+                                class="cursor-pointer focus:ring-to-end focus:ring-2 p-1.5 m-1 dark:text-text-primer bg-gray-50 dark:bg-bg-card shadow-md rounded-lg">
+                                <option value="Semua">Semua</option>
+                                <option value="Audio">Audio</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Peripherals">Peripherals</option>
+                                <option value="Wearables">Wearables</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="status" class="dark:text-text-primer">Status:</label>
+                            <select name="status" id="filter-status"
+                                class="cursor-pointer focus:ring-to-end focus:ring-2 p-1.5 m-1 dark:text-text-primer bg-gray-50 dark:bg-bg-card shadow-md rounded-lg">
+                                <option value="Semua status">Semua status</option>
+                                <option value="Aman">Aman</option>
+                                <option value="Waspada">Waspada</option>
+                                <option value="Kritis">Kritis</option>
+                                <option value="Overstock">Overstock</option>
+                                <option value="Dead Stock">Dead Stock</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="urutan" class="dark:text-text-primer">Urutkan:</label>
+                            <select name="urutan" id="filter-urutan"
+                                class="cursor-pointer focus:ring-to-end focus:ring-2 p-1.5 m-1 dark:text-text-primer bg-gray-50 dark:bg-bg-card shadow-md rounded-lg">
+                                <option value="SisaHari">Sisa hari</option>
+                                <option value="Stock">Stok</option>
+                                <option value="Harga">Harga beli</option>
+                                <option value="Kategori">Kategori</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABEL GUDANG -->
+                <div class="mt-6 max-h-[500px] overflow-y-auto overflow-x-auto relative custom-scrollbar">
+                    <table class="w-full min-w-[600px]">
+                        <thead
+                            class="sticky py-2 z-10 top-0 bg-white dark:bg-bg-card text-atas-lg text-to-end border-b border-slate-300 ">
+                            <th class="pb-3 pl-4 text-left">PRODUK</th>
+                            <th class="text-center">KATEGORI</th>
+                            <th class="text-center">Harga</th>
+                            <th class="text-center">STOK</th>
+                            <th class="text-center">STATUS</th>
+                            <th class="text-center">SISA HARI</th>
+                            <th class="text-center pl-4">AKSI</th>
+                        </thead>
+                        <tbody id="produkTabel"
+                            class="divide-y divide-slate-200 border-b border-slate-200 dark:text-text-primer">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ASIDE BAR / SIMULATOR RESTOCK -->
+            <aside
+                class="w-full lg:w-[30%] flex flex-col justify-between shrink-0 p-4 md:p-6 bg-white dark:bg-bg-card border dark:border-white/5 dark:shadow-black/60 border-slate-200 shadow-md shadow-xl rounded-2xl mb-10 lg:mb-0">
+                <h1
+                    class="text-lg font-semibold md:text-xl lg:text-2xl dark:text-text-primer text-center md:font-bold mb-4">
+                    SIMULATOR RESTOCK</h1>
+
+                <button id="btnAutofill"
+                    class="w-full py-3.5 shadow-2xl bg-linear-to-r from-start via-mid to-to-end rounded-2xl lg:text-lg font-semibold text-white cursor-pointer">Auto-Fill
+                    Produk Kritis</button>
+
+                <p class="mt-7 font-semibold dark:text-text-primer text-bawah-lg">Pemakaian budget: <span
+                        id="persenBudget" class="dark:text-text-sekunder">0%</span></p>
+
+                <div class="my-4 w-full h-2.5 bg-bg-main dark:bg-bar shadow-2xl rounded-2xl overflow-hidden">
+                    <div id="barProgres" class="w-0 h-2.5 rounded-xl bg-to-end"></div>
+                </div>
+
+                <p class="font-semibold dark:text-text-primer text-bawah-lg mb-2">Sisa: <span id="nominalSisa"
+                        class="dark:text-text-sekunder">Rp. 0</span></p>
+
+                <div id="restockProduk"
+                    class="my-2 p-2 h-[180px] lg:h-[230px] relative overflow-y-auto custom-scrollbar border-b border-t dark:border-slate-700 border-gray-300">
+                    <p class="dark:text-text-sekunder text-center">Belum ada barang di rencana restock.</p>
+                </div>
+
+                <div class="pt-0.5 dark:bg-bg-card">
+                    <h3 class="mt-1 mb-3.5 dark:text-text-primer text-bawah-lg font-semibold">TOTAL BELANJA: <span
+                            id="nominalTotal" class="dark:text-text-sekunder">Rp. 0</span></h3>
+                    <button id="btnEksekusi"
+                        class="p-4 w-full bg-to-end rounded-2xl text-white text-lg font-bold cursor-pointer">EKSEKUSI
+                        RESTOCK</button>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <!-- COPYRIGHT -->
+        <p class="text-sm dark:text-text-sekunder lg:text-atas-lg text-center mx-4 my-8 lg:my-15 font-thin opacity-40">
+            &copy; 2026 OmniPulse. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="./logic/app.js"></script>
+
+</body>
+
+</html>

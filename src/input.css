@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+    --color-bg-main: #F1F5F9;
+    --color-start: #3B82F6;
+    --color-mid: #6366F1;
+    --color-to-end: #8B5CF6;
+    --text-bawah-lg: 1.090rem;
+    --text-atas-lg: 1.15rem;
+
+    --color-bg-dark: #0B0F19;
+    --color-bg-card: #1E293B;
+    --color-garis-tabel: #2D3748;
+    --color-text-primer: #F8FAFC;
+    --color-text-sekunder: #94A3B8;
+    --color-aksen-tombol: #6366F1;
+    --color-bar: #2D3748;
+}
+
+/* Dukungan khusus untuk browser Firefox (aturan CSS standar) */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+/* Lebar keseluruhan scrollbar untuk Chrome/Safari/Edge */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;  /* Bikin lebih ramping dari bawaan browser */
+  height: 6px; /* Untuk scroll horizontal jika ada */
+}
+
+/* Jalur (track) tempat scrollbar bergerak */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 10px;
+}
+
+/* Batang (thumb) yang bisa ditarik pengguna */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* Warna abu-abu kalem (setara Tailwind slate-300) */
+    border-radius: 10px;       /* Ujungnya dibuat membulat elegan */
+}
+
+/* Warna batang scrollbar saat kursor diarahkan (hover) */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8; /* Sedikit lebih gelap (setara Tailwind slate-400) */
+}
